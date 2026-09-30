@@ -28,9 +28,9 @@ jobs:
           username: ${{env.GITHUB_ACTOR}}
           password: ${{secrets.GITHUB_TOKEN}}
 
-      - name: Build and Push Docke image
+      - name: Build and Push Docker image
         uses: docker/build-push-action@v7
         with:
-          content: src/CICD
+          context: src/CICD
           push: true
           tags: ${{env.REGISTRY}}/${{env.GITHUB_ACTOR}}/${{env.IMAGE_NAME}}:latest
