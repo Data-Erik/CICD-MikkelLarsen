@@ -6,7 +6,7 @@ on:
     push:
         branches: ["master"] #det kan være en hvilken som helst branch, kører den by default på alle branches.
 
-permission:
+permissions:
       contents: read
 
 env:
